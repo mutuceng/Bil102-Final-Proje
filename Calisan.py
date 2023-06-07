@@ -45,3 +45,10 @@ class Calisan(Insan):
                 return 0
         except ValueError:
             return 0
+
+    def __str__(self):
+        try:
+            yeni_maas = float(self.__maas) + self.zam_hakki()
+            return f"Ad: {self.get_ad()}\nSoyad: {self.get_soyad()}\nTecrübe: {self.get_tecrube()} yıl\nYeni Maaş: {yeni_maas:.2f}"
+        except ValueError:
+            return "Geçersiz değerler!"
