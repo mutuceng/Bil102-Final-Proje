@@ -25,3 +25,10 @@ class Issiz(Insan):
             return max(statuler, key=statuler.get)
         except ValueError:
             return None
+
+    def __str__(self):
+        try:
+            en_uygun_statu = self.statu_bul()
+            return f"Ad: {self.get_ad()}\nSoyad: {self.get_soyad()}\nEn Uygun Statü: {en_uygun_statu}"
+        except ValueError:
+            return "Geçersiz değerler!"
