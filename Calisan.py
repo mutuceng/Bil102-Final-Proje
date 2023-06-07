@@ -6,3 +6,11 @@ class Calisan(Insan):
         self.__tecrube = tecrube
         self.__maas = maas
 
+    def __sektorKontrol(self, sektor):
+        sektorler = ["teknoloji", "muhasebe", "inşaat", "diğer"]
+        if sektor.lower() in sektorler:
+            return sektor.lower()
+        else:
+            raise ValueError(f"Geçersiz sektor: {sektor}. Geçerli sektorler: {sektorler}")
+
+        
