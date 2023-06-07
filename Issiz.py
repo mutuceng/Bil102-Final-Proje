@@ -8,4 +8,20 @@ class Issiz(Insan):
     def set_tecrube_dict(self, tecrube_dict):
         self.__tecrube_dict = tecrube_dict
 
-    
+    def statu_bul(self):
+        try:
+            statuler = {
+                "mavi yaka": 0,
+                "beyaz yaka": 0,
+                "yönetici": 0
+            }
+            for statu, yil in self.__tecrube_dict.items():
+                if statu == "mavi yaka":
+                    statuler[statu] += yil * 0.2
+                elif statu == "beyaz yaka":
+                    statuler[statu] += yil * 0.35
+                elif statu == "yönetici":
+                    statuler[statu] += yil * 0.45
+            return max(statuler, key=statuler.get)
+        except ValueError:
+            return None
