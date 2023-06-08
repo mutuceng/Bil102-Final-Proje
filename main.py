@@ -92,3 +92,8 @@ print("\nMaaşı 15000 TL üzerinde olanların toplam sayısı:", toplam_sayi)
 print("\nYeni Maaşa göre kücükten büyüğe sıralama: ")
 siralama_df = df.sort_values(by="maas")
 print(siralama_df)
+
+# Tecrübesi 3 seneden fazla olan Beyaz yakalıları bulma
+print("\n Tecbrubesi 3 seneden fazla olan Beyaz Yakalılar: ")
+tecrube_3_ustu = df[(df["nesne_degeri"] == "beyaz yaka") & (df["tecrube"] > 3)]
+print(tecrube_3_ustu)
