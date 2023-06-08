@@ -87,3 +87,8 @@ print(gruplandirilmis_df)
 maas_15000_ustu = df[df["maas"] > 15000]
 toplam_sayi = len(maas_15000_ustu)
 print("\nMaaşı 15000 TL üzerinde olanların toplam sayısı:", toplam_sayi)
+
+# Yeni maaşa göre DataFrame'i küçükten büyüğe sıralama
+print("\nYeni Maaşa göre kücükten büyüğe sıralama: ")
+siralama_df = df.sort_values(by="maas")
+print(siralama_df)
