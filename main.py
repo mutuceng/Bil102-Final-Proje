@@ -103,3 +103,8 @@ print("\nYeni maaşı 10000 TL üzerinde olanlar: ")
 yeni_maas_10000_ustu = df[df["maas"] > 10000]
 satir_2_5_arasi = yeni_maas_10000_ustu.iloc[1:5, [1, 9]]
 print(satir_2_5_arasi)
+
+# g) Ad, soyad, sektor ve yeni maaşı içeren yeni DataFrame'i oluşturma
+yeni_df = df[["ad", "soyad", "sektor", "maas"]]
+print("\nDataFrame")
+print(yeni_df)
