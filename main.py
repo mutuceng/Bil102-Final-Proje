@@ -77,3 +77,8 @@ data = {
 }
 
 df = pd.DataFrame(data)
+
+# Gruplandırarak tecrube ve yeni maaş ortalamalarını hesaplama
+gruplandirilmis_df = df.groupby("nesne_degeri").agg({"tecrube": "mean", "maas": "mean"})
+print("\nTecrübe ve yeni maaş grup: ")
+print(gruplandirilmis_df)
