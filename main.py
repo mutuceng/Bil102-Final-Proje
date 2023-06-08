@@ -57,3 +57,23 @@ try:
     print(beyaz_yaka3)
 except Exception as e:
     print("Hata:", e)
+
+# DataFrame oluşturma
+data = {
+    "nesne_degeri": ["çalışan", "mavi yaka", "beyaz yaka"] * 3,
+    "tc_no": ["52635263526", "19071907190", "85296396385", "47878787878", "10101010101", "36363636363",
+              "91191191191", "12121212121", "74185274852"],
+    "ad": ["Nehir", "Hasan", "Kardelen", "Salih", "Ece", "Arda", "İpek", "Samet", "Selin"],
+    "soyad": ["Erdem", "Ali", "Kutlu", "Uçan", "Vural", "Güler", "Alın", "Özdemir", "Yıldız"],
+    "yas": [30, 34, 32, 33, 35, 33, 32, 40, 35],
+    "cinsiyet": ["Kadın", "Erkek", "Kadın", "Erkek", "Kadın", "Erkek", "Kadın", "Erkek", "Kadın"],
+    "uyruk": ["Türk", "Türk", "Türk", "Türk", "Türk", "Türk", "Türk", "Türk", "Türk"],
+    "sektor": ["İnşaat", "Teknoloji", "Diğer", "Teknoloji", "Diğer", "Teknoloji",
+               "Muhasebe", "Teknoloji", "Muhasebe"],
+    "tecrube": [3, 3, 3, 6, 3, 7, 3, 7, 6],
+    "maas": [7000, 16000, 8000, 17000, 13000, 29000, 8000, 26000, 18000],
+    "yipranma_payi": [0, 0.4, 0, 0, 0.3, 0, 0, 1.0, 0],
+    "tesvik_primi": [0, 0, 1000, 0, 0, 1500, 0, 0, 2000]
+}
+
+df = pd.DataFrame(data)
