@@ -16,11 +16,11 @@ class MaviYaka(Calisan):
             maas = float(self.get_maas())
             yipranma_payi = float(self.__yipranma_payi)
             if tecrube < 2:
-                return yipranma_payi * 10
+                return maas * (yipranma_payi * 10 / 100)
             elif tecrube >= 2 and tecrube <= 4 and maas < 15000:
-                return (maas * tecrube / 100) / 2 + (yipranma_payi * 10)
+                return maas * ((maas % tecrube / 2 + yipranma_payi * 10) / 100)
             elif tecrube > 4 and maas < 25000:
-                return (maas * tecrube / 100) / 3 + (yipranma_payi * 10)
+                return maas * ((maas % tecrube / 3 + yipranma_payi * 10) / 100)
             else:
                 return 0
         except ValueError:

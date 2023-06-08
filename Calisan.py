@@ -35,12 +35,14 @@ class Calisan(Insan):
         try:
             tecrube = int(self.__tecrube)
             maas = float(self.__maas)
+            zam_orani = maas % tecrube
+
             if tecrube < 2 or maas >= 25000:
                 return 0
             elif tecrube >= 2 and tecrube <= 4 and maas < 15000:
-                return maas * (tecrube / 100)
+                return maas * (zam_orani / 100)
             elif tecrube > 4 and maas < 25000:
-                return (maas * tecrube) / 200
+                return maas * (zam_orani / 200)
             else:
                 return 0
         except ValueError:

@@ -18,9 +18,9 @@ class BeyazYaka(Calisan):
             if tecrube < 2:
                 return tesvik_primi
             elif tecrube >= 2 and tecrube <= 4 and maas < 15000:
-                return (maas * tecrube / 100) * 5 + tesvik_primi
+                return (maas % tecrube) * 5 + tesvik_primi
             elif tecrube > 4 and maas < 25000:
-                return (maas * tecrube / 100) * 4 + tesvik_primi
+                return (maas % tecrube) * 4 + tesvik_primi
             else:
                 return 0
         except ValueError:
