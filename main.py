@@ -82,3 +82,8 @@ df = pd.DataFrame(data)
 gruplandirilmis_df = df.groupby("nesne_degeri").agg({"tecrube": "mean", "maas": "mean"})
 print("\nTecrübe ve yeni maaş grup: ")
 print(gruplandirilmis_df)
+
+# Maaşı 15000 TL üzerinde olanların toplam sayısını bulma
+maas_15000_ustu = df[df["maas"] > 15000]
+toplam_sayi = len(maas_15000_ustu)
+print("\nMaaşı 15000 TL üzerinde olanların toplam sayısı:", toplam_sayi)
