@@ -97,3 +97,9 @@ print(siralama_df)
 print("\n Tecbrubesi 3 seneden fazla olan Beyaz Yakalılar: ")
 tecrube_3_ustu = df[(df["nesne_degeri"] == "beyaz yaka") & (df["tecrube"] > 3)]
 print(tecrube_3_ustu)
+
+# Yeni maaşı 10000 TL üzerinde olanlar için 2-5 satır arasındakileri seçme
+print("\nYeni maaşı 10000 TL üzerinde olanlar: ")
+yeni_maas_10000_ustu = df[df["maas"] > 10000]
+satir_2_5_arasi = yeni_maas_10000_ustu.iloc[1:5, [1, 9]]
+print(satir_2_5_arasi)
